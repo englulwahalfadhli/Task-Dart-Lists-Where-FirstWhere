@@ -1,12 +1,17 @@
 void main() {
   List<int> numbers = [5, 3, 15, 4, 1];
   int sum = 0;
+  int largest = numbers[0];
 
   numbers.forEach((number) {
     sum += number;
+    if (number > largest) {
+      largest = number;
+    }
   });
 
   print("Sum of the elements: $sum");
+  print("Largest number in the list: $largest");
 
   //////////////////////////////////////////
 
